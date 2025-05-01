@@ -8,17 +8,17 @@ export default function Contact(){
         phone:"tel:8072017039",
         call:"8072017039"
     }
-    return <section id='contact' className='flex flex-col  px-4 py-25 items-center'>
+    return <section id='contact' className='flex flex-col  px-4 py-25 items-center bg-gray-900'>
          
         <div className='md:w-1/3 flex flex-col items-center px-10 py-10'> 
-            <h1 className='text-4xl border-b-4 border-[#37C8B7] mb-5 w-[130px] font-bold'>Contact</h1>
-            <p className='pb-5'> If you want to discuss more in detail, please contact me!</p>
-            <p className='py-2 flex items-center'>
+            <h1 className='text-4xl border-b-4 border-[#37C8B7] mb-5 w-[130px] font-bold text-white'>Contact</h1>
+            <p className='pb-5 text-white'> If you want to discuss more in detail, please contact me!</p>
+            <p className='py-2 flex items-center text-white'>
                 <a href={config.email} className="pr-2"><FiMail size={20}/></a>
                 <span className='font-bold pr-1'>Email : </span>
                 <a href={config.email}>{config.gmail}</a>
             </p>
-            <p className='py-2 flex items-center'>
+            <p className='py-2 flex items-center text-white'>
                 <a href={config.phone} className="pr-2"><FiPhoneCall size={20}/></a>
                 <span className='font-bold pr-1'>Phone :</span>
                 <a href={config.phone}>{config.call}</a>

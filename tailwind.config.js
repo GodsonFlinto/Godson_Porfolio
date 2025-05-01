@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {},
     fontFamily : {
-      'hero-font' : 'Bangers'
+      'hero-font' : 'Macondo'
     }
   },
   plugins: [],

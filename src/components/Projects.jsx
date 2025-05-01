@@ -26,10 +26,10 @@ export default function Projects(){
                 }
             ]
     }
-    return <section id='projects' className="flex flex-col py-20 px-5 justify-center">
+    return <section id='projects' className="flex flex-col py-20 px-5 justify-center bg-gray-900">
         <div className="w-full py-2">
         <div className="flex flex-col px-20 py-5">
-            <h1 className="text-4xl border-b-4 border-[#37C8B7] mb-5 w-[135px] font-bold">Projects</h1>
+            <h1 className="text-4xl border-b-4 border-[#37C8B7] mb-5 w-[135px] font-bold text-white">Projects</h1>
                 <p>These are some of my projects...</p>
         </div>
         </div>

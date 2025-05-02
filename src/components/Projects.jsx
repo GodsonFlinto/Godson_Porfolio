@@ -1,55 +1,88 @@
 import { MdDescription } from 'react-icons/md'
 import websiteImg from '../assets/project1.png'
-import websiteImg2 from '../assets/project2.png'
-import websiteImg3 from '../assets/project3.jpg'
+import websiteImg2 from '../assets/project2.jpg'
+import websiteImg3 from '../assets/project3.png'
 
-export default function Projects(){
-    const config ={
-            projects:[
-                {
-                    image: websiteImg,
-                    title:"CONTACT MANAGEMENT SYSTEM",
-                    description: "Easily access the contact details of students and alumni's contact details for placements.",
-                    link:"https://github.com/GodsonFlinto/Contact-Management"
-                },
-                {
-                    image: websiteImg2,
-                    title:"HOSPITAL APPOINTMENT BOOKING SYSTEM",
-                    description: "Book an appointment for consulting a doctor on time for a hassle-free experience. ",
-                    link:""
-                },
-                {
-                    image: websiteImg3,
-                    title:"HAIRCUT BOOKING SYSTEM",
-                    description: "Schedule your haircut easily and get a stylish look at your preferred time.",
-                    link:""
-                }
-            ]
-    }
-    return <section id='projects' className="flex flex-col py-20 px-5 justify-center bg-gray-900">
-        <div className="w-full py-2">
-        <div className="flex flex-col px-20 py-5">
-            <h1 className="text-4xl border-b-4 border-[#37C8B7] mb-5 w-[135px] font-bold text-white">Projects</h1>
-                <p>These are some of my projects...</p>
+export default function Projects() {
+  const config = {
+    projects: [
+      {
+        image: websiteImg,
+        title: "CONTACT MANAGEMENT SYSTEM",
+        description: "Easily access the contact details of students and alumni's contact details for placements.",
+        link: "https://github.com/GodsonFlinto/Contact-Management-System",
+        tech: ['Laravel', 'MySql', 'Node.js'],
+      },
+      {
+        image: websiteImg2,
+        title: "HOSPITAL APPOINTMENT BOOKING SYSTEM",
+        description: "Book an appointment for consulting a doctor on time for a hassle-free experience.",
+        link: "https://github.com/GodsonFlinto/cricketstore",
+        tech: ['PHP', 'MySQL', 'HTML/CSS'],
+      },
+      {
+        image: websiteImg3,
+        title: "HAIRCUT BOOKING SYSTEM",
+        description: "Schedule your haircut easily and get a stylish look at your preferred time.",
+        link: "https://github.com/GodsonFlinto/sheartime",
+        tech: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],
+      }
+    ]
+  }
+
+  return (
+    <section id='projects' className="flex flex-col py-20 px-5 justify-center bg-gray-900">
+      {/* Title */}
+      <div className="w-full py-2">
+        <div className="flex flex-col items-center py-5">
+          <h1 className="text-4xl border-b-4 border-[#37C8B7] mb-5 font-bold text-white text-center">
+            Projects
+          </h1>
         </div>
-        </div>
-        <div className="w-full justify-center">
-            <div className='flex flex-col md:flex-row px-20 gap-5'>
-                {config.projects.map((projects)=>(
-                    <div className='relative'>
-                        <img className='h-[250px] w-[500px] rounded-2xl shadow-xl' src={projects.image}/>
-                        <h1 className='text-center font-semibold py-5'>{projects.title}</h1>
-                        <div className='project-desc'>
-                            <p className='text-center px-5 font-hero-font py-10'>{projects.description}</p>
-                                <div className='flex justify-center'>
-                                    <a className='btn1  text-center' target='_blank' href={projects.link}>Get Project</a>
-                                </div>
-                        </div>   
-     
-                    </div>
+      </div>
+
+      {/* Project Cards */}
+      <div className="w-full justify-center">
+        <div className="flex flex-col md:flex-row px-5 md:px-20 gap-20 flex-wrap justify-center">
+          {config.projects.map((project, index) => (
+            <div
+              key={index}
+              className="w-[300px] bg-white/10 backdrop-blur-md text-white p-5 rounded-lg border border-white/20 shadow-md flex flex-col items-center hover:shadow-[#37C8B7]/40 hover:scale-105 transition-all duration-300"
+            >
+              <div className="border-2 border-[#37C8B7] p-1 rounded-md">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-[250px] object-cover rounded-md"
+                />
+              </div>
+              <h2 className="text-xl font-bold text-center mt-4">{project.title}</h2>
+              <p className="text-sm text-center mt-2 mb-4">{project.description}</p>
+
+              {/* Tech Stack Tags */}
+              <div className="flex flex-wrap justify-center gap-2 mt-2 mb-3">
+                {project.tech.map((tech, idx) => (
+                  <span key={idx} className="bg-[#37C8B7]/20 text-[#37C8B7] px-2 py-1 text-xs rounded-full">
+                    {tech}
+                  </span>
                 ))}
-                
+              </div>
+
+              {/* Project Link */}
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#37C8B7] font-semibold hover:text-[#2aa197] hover:underline"
+                >
+                  View Project
+                </a>
+              )}
             </div>
+          ))}
         </div>
+      </div>
     </section>
+  )
 }

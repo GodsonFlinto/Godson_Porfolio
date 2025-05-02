@@ -19,10 +19,6 @@ export default function Hero() {
 
   return (
     <section className='bg-gray-900 px-4 sm:px-6 py-20 relative'>
-      {/* Mobile menu toggle */}
-      <button onClick={() => setToggleMenu(!toggleMenu)} className='block md:hidden absolute top-6 left-6'>
-        <Bars3Icon className='text-white h-6' />
-      </button>
 
       {/* Flex wrapper */}
       <div className='flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-16 max-w-6xl mx-auto px-4 pt-40'>

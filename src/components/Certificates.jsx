@@ -24,12 +24,12 @@ export default function Certificates() {
   }, [current]);
 
   return (
-    <section id='certificates' className="bg-gray-900 py-16 text-white text-center">
+    <section id="certificates" className="bg-gray-900 py-16 text-white text-center">
       <h1 className="text-4xl font-bold mb-10 border-b-4 border-[#37C8B7] inline-block">
         Certificates
       </h1>
 
-      <div className="flex items-center justify-center gap-4 mt-10">
+      <div className="flex items-center justify-center gap-4 mt-10 px-4 sm:px-0 flex-wrap">
         {certificates.map((cert, index) => {
           const isActive = index === current;
           const isPrev = index === (current - 1 + certificates.length) % certificates.length;
@@ -38,18 +38,18 @@ export default function Certificates() {
           return (
             <div
               key={index}
-              className={`transition-all duration-500 rounded-xl shadow-xl backdrop-blur-lg bg-white/10 border border-white/20 ${
-                isActive
-                  ? 'scale-100 opacity-100 border-2 border-[#37C8B7]'
-                  : isPrev || isNext
-                  ? 'scale-90 opacity-40'
-                  : 'hidden'
-              }`}
+              className={`
+                transition-all duration-500 rounded-xl backdrop-blur-lg bg-white/10 border border-white/20
+                ${isActive ? 'scale-100 opacity-100 border-2 border-[#808080] shadow-[0_4px_10px_rgba(55,200,183,0.6)]' : ''}
+                ${(isPrev || isNext) ? 'hidden sm:block scale-90 opacity-40' : ''}
+                ${!isActive && !isPrev && !isNext ? 'hidden' : ''}
+                w-full sm:w-auto sm:max-w-none max-w-xs
+              `}
             >
               <img
                 src={cert.image}
                 alt={cert.title}
-                className="w-full h-80 object-cover rounded-xl"
+                className="w-full h-72 sm:h-80 object-cover rounded-xl"
               />
               {isActive && (
                 <h2 className="mt-3 text-xl font-semibold italic px-2 pb-3">

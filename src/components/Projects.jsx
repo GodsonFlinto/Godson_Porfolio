@@ -31,7 +31,7 @@ export default function Projects() {
   }
 
   return (
-    <section id='projects' className="flex flex-col py-20 px-5 justify-center bg-gray-900">
+    <section id='projects' className="flex flex-col py-20 px-4 sm:px-5 justify-center bg-gray-900">
       {/* Title */}
       <div className="w-full py-2">
         <div className="flex flex-col items-center py-5">
@@ -43,20 +43,20 @@ export default function Projects() {
 
       {/* Project Cards */}
       <div className="w-full justify-center">
-        <div className="flex flex-col md:flex-row px-5 md:px-20 gap-20 flex-wrap justify-center">
+        <div className="flex flex-col md:flex-row px-2 sm:px-10 md:px-20 gap-10 flex-wrap items-center justify-center">
           {config.projects.map((project, index) => (
             <div
               key={index}
-              className="w-[300px] bg-white/10 backdrop-blur-md text-white p-5 rounded-lg border border-white/20 shadow-md flex flex-col items-center hover:shadow-[#37C8B7]/40 hover:scale-105 transition-all duration-300"
+              className="w-full max-w-xs bg-white/10 backdrop-blur-md text-white p-5 rounded-lg border border-white/20 shadow-md flex flex-col items-center hover:shadow-[#37C8B7]/40 hover:scale-105 transition-all duration-300"
             >
-              <div className="border-2 border-[#37C8B7] p-1 rounded-md">
+              <div className="border-2 border-[#37C8B7] p-1 rounded-md w-full">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-[250px] object-cover rounded-md"
+                  className="w-full h-[200px] object-cover rounded-md"
                 />
               </div>
-              <h2 className="text-xl font-bold text-center mt-4">{project.title}</h2>
+              <h2 className="text-lg sm:text-xl font-bold text-center mt-4">{project.title}</h2>
               <p className="text-sm text-center mt-2 mb-4">{project.description}</p>
 
               {/* Tech Stack Tags */}

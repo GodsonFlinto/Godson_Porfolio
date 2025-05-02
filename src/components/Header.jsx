@@ -37,22 +37,27 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {toggleMenu && (
-                <nav className="md:hidden absolute top-16 left-0 w-full backdrop-blur-md bg-white/10 border-t border-white/20 py-4 shadow-lg">
-                    <ul className="flex flex-row justify-center items-center gap-4 text-white">
-                        {navLinks.map((link) => (
-                            <li key={link.href}>
-                                <a
-                                    href={link.href}
-                                    onClick={() => setToggleMenu(false)}
-                                    className="text-lg hover:text-[#37C8B7] transition-all duration-150"
-                                >
-                                    {link.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
-            )}
+  <nav className="md:hidden absolute top-16 left-0 w-full bg-white/20 border-b border-white/20 shadow-md backdrop-blur-md">
+    <ul className="flex flex-col justify-center items-center gap-4 text-white">
+      {navLinks.map((link) => (
+        <li key={link.href}>
+          <a
+            href={link.href}
+            onClick={() => setToggleMenu(false)}
+            className="text-lg hover:text-[#37C8B7] transition-all duration-200"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+
+
+
+
         </header>
     );
 }

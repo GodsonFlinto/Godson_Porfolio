@@ -1,12 +1,8 @@
 import Heroimg from '../assets/hero.svg';
 import { SiGmail, SiGithub, SiLinkedin } from "react-icons/si";
 import { HiDownload } from 'react-icons/hi';
-import { Bars3Icon } from '@heroicons/react/24/solid';
-import { useState } from 'react';
 
 export default function Hero() {
-  const [toggleMenu, setToggleMenu] = useState(false);
-
   const config = {
     link: "https://pdflink.to/godresume3/",
     subtitle: "I'm a Front End Developer",
@@ -21,7 +17,7 @@ export default function Hero() {
     <section className='bg-gray-900 px-4 sm:px-6 py-20 relative'>
 
       {/* Flex wrapper */}
-      <div className='flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-16 max-w-6xl mx-auto px-4 pt-40'>
+      <div className='flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-16 max-w-6xl mx-auto px-4'>
         
         {/* Text section */}
         <div className='w-full sm:w-1/2'>
@@ -31,12 +27,14 @@ export default function Hero() {
           </h1>
           <p className='text-2xl mt-4 text-white'>{config.subtitle}</p>
           
+          {/* Social links */}
           <div className='flex py-6'>
             <a href={config.sociallink.gmail} className='pr-4 text-white hover:text-[#37C8B7]'><SiGmail size={30} /></a>
-            <a href={config.sociallink.github} target='_blank' className='pr-4 text-white hover:text-[#37C8B7]'><SiGithub size={30} /></a>
-            <a href={config.sociallink.linkedin} target='_blank' className='pr-4 text-white hover:text-[#37C8B7]'><SiLinkedin size={30} /></a>
+            <a href={config.sociallink.github} target='_blank' rel="noopener noreferrer" className='pr-4 text-white hover:text-[#37C8B7]'><SiGithub size={30} /></a>
+            <a href={config.sociallink.linkedin} target='_blank' rel="noopener noreferrer" className='pr-4 text-white hover:text-[#37C8B7]'><SiLinkedin size={30} /></a>
           </div>
 
+          {/* Resume Button */}
           <div>
             <a
               className="flex items-center gap-2 w-fit px-6 py-2 text-sm text-white bg-[#37C8B7] hover:bg-[#166359] rounded-md transition-all duration-200"

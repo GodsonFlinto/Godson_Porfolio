@@ -11,14 +11,14 @@ export default function Projects() {
         title: "CONTACT MANAGEMENT SYSTEM",
         description: "Easily access the contact details of students and alumni's contact details for placements.",
         link: "https://github.com/GodsonFlinto/Contact-Management-System",
-        tech: ['Laravel', 'MySql', 'Node.js'],
+        tech: ['HTML', 'Laravel', 'MySql'],
       },
       {
         image: websiteImg2,
-        title: "HOSPITAL APPOINTMENT BOOKING SYSTEM",
+        title: "Cric Store",
         description: "Book an appointment for consulting a doctor on time for a hassle-free experience.",
         link: "https://github.com/GodsonFlinto/cricketstore",
-        tech: ['PHP', 'MySQL', 'HTML/CSS'],
+        tech: ['React', 'CSS', 'Firebase'],
       },
       {
         image: websiteImg3,
@@ -76,7 +76,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="text-[#37C8B7] font-semibold hover:text-[#2aa197] hover:underline"
                 >
-                  View Project
+                  Get Project
                 </a>
               )}
             </div>

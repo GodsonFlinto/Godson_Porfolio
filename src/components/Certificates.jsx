@@ -40,11 +40,15 @@ export default function Certificates() {
               key={index}
               className={`
                 transition-all duration-500 rounded-xl backdrop-blur-lg bg-white/10 border border-white/20
-                ${isActive ? 'scale-100 opacity-100 border-2 border-[#808080] shadow-[0_4px_10px_rgba(55,200,183,0.6)]' : ''}
+                ${isActive ? 'scale-100 opacity-100 border-2 border-[#353535] shadow-[0_4px_5px_rgba(55,200,183,0.6)]' : ''}
                 ${(isPrev || isNext) ? 'hidden sm:block scale-90 opacity-40' : ''}
                 ${!isActive && !isPrev && !isNext ? 'hidden' : ''}
                 w-full sm:w-auto sm:max-w-none max-w-xs
               `}
+              style={{
+                backdropFilter: 'blur(8px)', // Ensure the backdrop blur is applied
+                backgroundColor: 'rgba(255, 255, 255, 0.1)', // Set a translucent white background
+              }}
             >
               <img
                 src={cert.image}

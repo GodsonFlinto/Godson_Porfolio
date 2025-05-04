@@ -1,34 +1,34 @@
-import { MdDescription } from 'react-icons/md'
-import websiteImg from '../assets/project1.png'
-import websiteImg2 from '../assets/project2.jpg'
-import websiteImg3 from '../assets/project3.png'
+import { MdDescription } from 'react-icons/md';
+import websiteImg from '../assets/project1.png';
+import websiteImg2 from '../assets/project2.jpg';
+import websiteImg3 from '../assets/project3.png';
 
 export default function Projects() {
   const config = {
     projects: [
       {
         image: websiteImg,
-        title: "CONTACT MANAGEMENT SYSTEM",
-        description: "Easily access the contact details of students and alumni's contact details for placements.",
+        title: "Contact Management System",
+        description: "A web-based platform for managing and accessing student and alumni contact information, designed to assist placement coordinators.",
         link: "https://github.com/GodsonFlinto/Contact-Management-System",
-        tech: ['HTML', 'Laravel', 'MySql'],
+        tech: ['HTML', 'Laravel', 'MySQL'],
       },
       {
         image: websiteImg2,
         title: "Cric Store",
-        description: "Book an appointment for consulting a doctor on time for a hassle-free experience.",
+        description: "An e-commerce site tailored for cricket gear, allowing users to browse, select, and order sports equipment with Firebase-powered authentication.",
         link: "https://github.com/GodsonFlinto/cricketstore",
         tech: ['React', 'CSS', 'Firebase'],
       },
       {
         image: websiteImg3,
-        title: "HAIRCUT BOOKING SYSTEM",
-        description: "Schedule your haircut easily and get a stylish look at your preferred time.",
+        title: "Haircut Booking System",
+        description: "An intuitive web application for users to book haircut appointments, featuring user authentication, scheduling, and stylist management.",
         link: "https://github.com/GodsonFlinto/sheartime",
         tech: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],
       }
     ]
-  }
+  };
 
   return (
     <section id='projects' className="flex flex-col py-20 px-4 sm:px-5 justify-center bg-gray-900">
@@ -84,5 +84,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

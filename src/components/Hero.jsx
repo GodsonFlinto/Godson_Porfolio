@@ -14,24 +14,23 @@ export default function Hero() {
   };
 
   return (
-    <section className='bg-gray-900 px-4 sm:px-6 py-20 relative'>
-
+    <section className="bg-gray-900 px-3 sm:px-6 pt-24 md:pt-36 pb-20 relative">
       {/* Flex wrapper */}
-      <div className='flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-16 max-w-6xl mx-auto px-4'>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-16 max-w-6xl mx-auto">
         
         {/* Text section */}
-        <div className='w-full sm:w-1/2'>
-          <h1 className='text-white text-4xl sm:text-5xl lg:text-6xl italic leading-tight'>
+        <div className="w-full sm:w-1/2">
+          <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl italic leading-tight">
             Hi <br />
-            I'm <span className='text-[#37C8B7] font-hero-font'>Godson Flinto J</span>
+            I'm <span className="text-[#37C8B7] font-hero-font">Godson Flinto J</span>
           </h1>
-          <p className='text-2xl mt-4 text-white'>{config.subtitle}</p>
-          
+          <p className="text-2xl mt-4 text-white">{config.subtitle}</p>
+
           {/* Social links */}
-          <div className='flex py-6'>
-            <a href={config.sociallink.gmail} className='pr-4 text-white hover:text-[#37C8B7]'><SiGmail size={30} /></a>
-            <a href={config.sociallink.github} target='_blank' rel="noopener noreferrer" className='pr-4 text-white hover:text-[#37C8B7]'><SiGithub size={30} /></a>
-            <a href={config.sociallink.linkedin} target='_blank' rel="noopener noreferrer" className='pr-4 text-white hover:text-[#37C8B7]'><SiLinkedin size={30} /></a>
+          <div className="flex py-6">
+            <a href={config.sociallink.gmail} className="pr-4 text-white hover:text-[#37C8B7]"><SiGmail size={30} /></a>
+            <a href={config.sociallink.github} target="_blank" rel="noopener noreferrer" className="pr-4 text-white hover:text-[#37C8B7]"><SiGithub size={30} /></a>
+            <a href={config.sociallink.linkedin} target="_blank" rel="noopener noreferrer" className="pr-4 text-white hover:text-[#37C8B7]"><SiLinkedin size={30} /></a>
           </div>
 
           {/* Resume Button */}
@@ -48,8 +47,8 @@ export default function Hero() {
         </div>
 
         {/* Image section */}
-        <div className='w-full sm:w-1/2 flex justify-center sm:justify-end'>
-          <img className='w-64 sm:w-72 md:w-80 lg:w-96' src={Heroimg} alt="Hero" />
+        <div className="w-full sm:w-1/2 flex justify-center sm:justify-end">
+          <img className="w-64 sm:w-72 md:w-80 lg:w-96" src={Heroimg} alt="Hero" />
         </div>
       </div>
     </section>

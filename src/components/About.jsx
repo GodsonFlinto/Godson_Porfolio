@@ -24,7 +24,7 @@ export default function About() {
   ];
 
   return (
-    <section id='about' className='bg-gray-900 text-white px-6 py-20'>
+    <section id='about' className='bg-gray-900 text-white px-8 py-20'>
 
       {/* ------------ Mobile Layout ------------ */}
       <div className='md:hidden flex flex-col items-center'>
@@ -56,7 +56,7 @@ export default function About() {
       </div>
 
       {/* ------------ Desktop Layout ------------ */}
-      <div className='hidden md:flex flex-row px-4 md:px-10 lg:px-20'>
+      <div className='hidden md:flex flex-row px-4 md:px-10 pt-20 lg:px-20'>
         {/* Image */}
         <div className='w-1/2 flex items-center justify-center'>
           <img src={AboutImg} alt='About Illustration' className='w-full h-80 object-contain' />

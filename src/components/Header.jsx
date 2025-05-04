@@ -20,7 +20,7 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex flex-1 justify-center">
-          <ul className="flex space-x-5 text-base font-medium text-white">
+          <ul className="flex space-x-5 text-base font-medium= text-white font-nav-font ">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a

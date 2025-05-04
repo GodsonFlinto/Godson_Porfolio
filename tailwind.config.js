@@ -5,7 +5,8 @@ export default {
     extend: {},
     fontFamily : {
       'hero-font' : 'Macondo',
-      'font-new' : 'Satisfy'
+      'font-new' : 'Satisfy',
+      'nav-font' : 'Jost'
     }
   },
   plugins: [],

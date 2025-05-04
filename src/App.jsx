@@ -9,12 +9,12 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-gray-900 text-white min-h-screen ">
       {/* Fixed Header & Mobile Menu */}
       <Header />
 
       {/* Main content: push below fixed header */}
-      <main className="pt-20 px-"> {/* Adjust pt-24 if header height is larger */}
+      <main className="pt-20"> {/* Increased from pt-20 to pt-28 */}
         <Hero />
         <About />
         <Projects />

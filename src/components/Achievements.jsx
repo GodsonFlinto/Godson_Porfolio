@@ -189,8 +189,8 @@ export default function Achievement() {
             {/* Video Title Overlay */}
             <div className="absolute bottom-4 left-4 right-4">
               <div className="bg-black/50 backdrop-blur-sm rounded-lg p-3">
-                <h4 className="text-white font-semibold text-sm">
-                  🏆 VYUGAM 23 - Cricket Championship Victory
+                <h4 className="text-white relative font-semibold text-sm">
+                 <span className='absolute pt-10'> 🏆 </span>  VYUGAM 23 - Cricket Championship Victory
                 </h4>
                 <p className="text-gray-200 text-xs mt-1">
                   Watch the highlights of our championship win
@@ -221,7 +221,7 @@ export default function Achievement() {
           ) : (
             <HiMoon size={24} className={`${currentTheme.secondaryText} transition-colors duration-300`} />
           )}
-        </button>
+        </button>  
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -310,7 +310,7 @@ export default function Achievement() {
             {/* Achievement Card */}
             <div className={`${currentTheme.achievementCard} rounded-3xl p-8 shadow-xl border transition-all duration-300 hover:scale-105`}>
               <div className="flex items-start space-x-6">
-                <div className="text-8xl">🏆</div>
+                <div className="text-8xl my-auto">🏆</div>
                 <div className="flex-1 space-y-4">
                   <div className={`text-xl font-bold ${currentTheme.achievementYear}`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>
                     {cricketAchievement.year}

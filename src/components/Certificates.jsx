@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { HiSun, HiMoon } from 'react-icons/hi';
+import { useTheme } from './ThemeContext'; // Adjust path as needed
 import iot from '../assets/iot.jpg';
 import python from '../assets/python.jpg';
 import cprogram from '../assets/cpro.jpg';
@@ -14,7 +15,7 @@ const GoogleFonts = () => (
 );
 
 export default function Certificates() {
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const { currentTheme, isDarkTheme, toggleTheme } = useTheme();
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedCert, setSelectedCert] = useState(null);
 
@@ -42,30 +43,18 @@ export default function Certificates() {
     },
   ];
 
-  // Theme configurations matching Achievement component
-  const themes = {
+  // Extended theme configurations for certificates
+  const certificateThemes = {
     dark: {
-      sectionBg: 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900',
-      sectionStyle: {},
-      // Background elements
-      bgElement1: 'bg-gradient-to-r from-cyan-400/20 to-blue-500/20',
-      bgElement2: 'bg-gradient-to-r from-purple-500/15 to-pink-500/15',
-      bgElement3: 'bg-cyan-400/10',
-      bgElement4: 'bg-gradient-to-r from-indigo-500/10 to-purple-500/10',
-      // Text colors
-      titleText: 'text-white',
-      subtitleText: 'text-gray-300',
-      bodyText: 'text-gray-300',
-      gradientText: 'bg-gradient-to-r from-cyan-400 to-blue-500',
-      cardTitleText: 'text-white',
-      cardSubText: 'text-gray-300',
-      // Cards
+      // Card styles
       cardBg: 'bg-slate-800/70',
       cardBorder: 'border-slate-700/50 hover:border-cyan-400/50',
       cardShadow: 'hover:shadow-cyan-500/25',
       cardOverlay: 'bg-gradient-to-t from-slate-900/60 to-transparent',
       cardHoverOverlay: 'bg-gradient-to-t from-slate-900/20 to-transparent',
-      // Modal
+      cardTitleText: 'text-white',
+      cardSubText: 'text-gray-300',
+      // Modal styles
       modalBg: 'bg-black/80',
       modalCard: 'bg-slate-800/95',
       modalBorder: 'border-slate-700/50',
@@ -89,29 +78,15 @@ export default function Certificates() {
       secondaryText: 'text-gray-300',
     },
     light: {
-      sectionBg: 'bg-[#FFFBDE]',
-      sectionStyle: {
-        background: 'linear-gradient(135deg, #FFFBDE 0%, #FFF8D1 50%, #FFFBDE 100%)'
-      },
-      // Background elements with teal
-      bgElement1: 'bg-[#129990]/20',
-      bgElement2: 'bg-[#129990]/15',
-      bgElement3: 'bg-[#129990]/10',
-      bgElement4: 'bg-[#129990]/25',
-      // Text colors
-      titleText: 'text-slate-800',
-      subtitleText: 'text-slate-700',
-      bodyText: 'text-slate-700',
-      gradientText: 'bg-gradient-to-r from-[#129990] to-[#0F7A6B]',
-      cardTitleText: 'text-slate-800',
-      cardSubText: 'text-slate-700',
-      // Cards
+      // Card styles
       cardBg: 'bg-white/95',
       cardBorder: 'border-[#129990]/20 hover:border-[#129990]/50',
       cardShadow: 'hover:shadow-[#129990]/25',
       cardOverlay: 'bg-gradient-to-t from-white/60 to-transparent',
       cardHoverOverlay: 'bg-gradient-to-t from-white/20 to-transparent',
-      // Modal
+      cardTitleText: 'text-slate-800',
+      cardSubText: 'text-slate-700',
+      // Modal styles
       modalBg: 'bg-slate-900/60',
       modalCard: 'bg-white/95',
       modalBorder: 'border-[#129990]/30',
@@ -136,7 +111,7 @@ export default function Certificates() {
     }
   };
 
-  const currentTheme = isDarkTheme ? themes.dark : themes.light;
+  const certTheme = isDarkTheme ? certificateThemes.dark : certificateThemes.light;
 
   return (
     <>
@@ -146,19 +121,19 @@ export default function Certificates() {
         className={`${currentTheme.sectionBg} px-6 py-24 relative overflow-hidden min-h-screen flex items-center transition-all duration-500`}
         style={{fontFamily: 'Josefin Sans, sans-serif', ...currentTheme.sectionStyle}}
       >
-        {/* Theme Toggle Button - Matching Achievement component */}
+        {/* Theme Toggle Button */}
         <button
-          onClick={() => setIsDarkTheme(!isDarkTheme)}
-          className={`fixed top-6 right-6 z-50 p-3 ${currentTheme.cardBg} backdrop-blur-sm rounded-full shadow-lg ${currentTheme.cardBorder} border transition-all duration-300 transform hover:scale-110 ${currentTheme.socialHover}`}
+          onClick={toggleTheme}
+          className={`fixed top-6 right-6 z-50 p-3 ${certTheme.cardBg} backdrop-blur-sm rounded-full shadow-lg ${certTheme.cardBorder} border transition-all duration-300 transform hover:scale-110 ${certTheme.socialHover}`}
         >
           {isDarkTheme ? (
-            <HiSun size={24} className={`${currentTheme.secondaryText} transition-colors duration-300`} />
+            <HiSun size={24} className={`${certTheme.secondaryText} transition-colors duration-300`} />
           ) : (
-            <HiMoon size={24} className={`${currentTheme.secondaryText} transition-colors duration-300`} />
+            <HiMoon size={24} className={`${certTheme.secondaryText} transition-colors duration-300`} />
           )}
         </button>
 
-        {/* Animated Background Elements - Matching Achievement component */}
+        {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl animate-pulse`}></div>
           <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl animate-bounce`} style={{animationDuration: '4s'}}></div>
@@ -170,9 +145,9 @@ export default function Certificates() {
           {/* Title Section */}
           <div className="text-center mb-20">
             <h1 className={`text-6xl md:text-5xl font-bold ${currentTheme.titleText} mb-6 tracking-tight`}>
-              <span className={`text-transparent ${currentTheme.gradientText} bg-clip-text`}>Certificates</span>
+              <span className={`${currentTheme.gradientText}`}>Certificates</span>
             </h1>
-            <div className={`w-32 h-1 ${currentTheme.dividerBg} mx-auto rounded-full`}></div>
+            <div className={`w-32 h-1 ${certTheme.dividerBg} mx-auto rounded-full`}></div>
           </div>
 
           {/* Certificates Grid */}
@@ -186,7 +161,7 @@ export default function Certificates() {
                 onClick={() => setSelectedCert(cert)}
               >
                 {/* Main Card */}
-                <div className={`relative ${currentTheme.cardBg} backdrop-blur-xl rounded-3xl overflow-hidden border ${currentTheme.cardBorder} transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl ${currentTheme.cardShadow}`}>
+                <div className={`relative ${certTheme.cardBg} backdrop-blur-xl rounded-3xl overflow-hidden border ${certTheme.cardBorder} transition-all duration-500 transform hover:-translate-y-4 hover:shadow-2xl ${certTheme.cardShadow}`}>
                   
                   {/* Animated Glow Effect */}
                   <div className={`absolute inset-0 bg-gradient-to-r ${isDarkTheme ? cert.color : cert.lightColor} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl blur-xl`}></div>
@@ -200,7 +175,7 @@ export default function Certificates() {
                   <div className="relative p-8">
                     {/* Image Container */}
                     <div className="relative mb-6 overflow-hidden rounded-2xl">
-                      <div className={`absolute inset-0 ${currentTheme.cardOverlay} z-10`}></div>
+                      <div className={`absolute inset-0 ${certTheme.cardOverlay} z-10`}></div>
                       <img
                         src={cert.image}
                         alt={cert.title}
@@ -208,7 +183,7 @@ export default function Certificates() {
                       />
                       
                       {/* Floating Badge */}
-                      <div className={`absolute top-4 right-4 z-20 bg-gradient-to-r ${isDarkTheme ? cert.color : cert.lightColor} ${currentTheme.badgeText} px-4 py-2 rounded-full text-sm font-semibold shadow-lg transform transition-transform duration-300 group-hover:scale-110`}>
+                      <div className={`absolute top-4 right-4 z-20 bg-gradient-to-r ${isDarkTheme ? cert.color : cert.lightColor} ${certTheme.badgeText} px-4 py-2 rounded-full text-sm font-semibold shadow-lg transform transition-transform duration-300 group-hover:scale-110`}>
                         Certified
                       </div>
                     </div>
@@ -216,17 +191,17 @@ export default function Certificates() {
                     {/* Text Content */}
                     <div className="space-y-4">
                       <div>
-                        <h3 className={`text-2xl font-bold mb-2 transition-all duration-300 ${hoveredIndex === index ? `text-transparent bg-gradient-to-r ${isDarkTheme ? cert.color : cert.lightColor} bg-clip-text` : currentTheme.cardTitleText}`}>
+                        <h3 className={`text-2xl font-bold mb-2 transition-all duration-300 ${hoveredIndex === index ? `text-transparent bg-gradient-to-r ${isDarkTheme ? cert.color : cert.lightColor} bg-clip-text` : certTheme.cardTitleText}`}>
                           {cert.title}
                         </h3>
-                        <p className={`text-lg font-medium ${currentTheme.cardSubText}`}>
+                        <p className={`text-lg font-medium ${certTheme.cardSubText}`}>
                           {cert.subtitle}
                         </p>
                       </div>
                       
                       {/* Progress Bar */}
                       <div className="relative">
-                        <div className={`w-full ${currentTheme.progressBg} rounded-full h-2`}>
+                        <div className={`w-full ${certTheme.progressBg} rounded-full h-2`}>
                           <div className={`bg-gradient-to-r ${isDarkTheme ? cert.color : cert.lightColor} h-2 rounded-full transition-all duration-1000 group-hover:w-full`}
                                style={{width: hoveredIndex === index ? '100%' : '70%'}}></div>
                         </div>
@@ -236,7 +211,7 @@ export default function Certificates() {
                   </div>
 
                   {/* Hover Overlay */}
-                  <div className={`absolute inset-0 ${currentTheme.cardHoverOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none`}></div>
+                  <div className={`absolute inset-0 ${certTheme.cardHoverOverlay} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none`}></div>
                 </div>
 
                 {/* Floating Elements */}
@@ -254,7 +229,7 @@ export default function Certificates() {
               {certificates.map((cert, index) => (
                 <div
                   key={index}
-                  className={`w-3 h-3 rounded-full bg-gradient-to-r ${isDarkTheme ? currentTheme.dotColors[index] : cert.lightColor} opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer`}
+                  className={`w-3 h-3 rounded-full bg-gradient-to-r ${isDarkTheme ? certTheme.dotColors[index] : cert.lightColor} opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer`}
                 ></div>
               ))}
             </div>
@@ -263,12 +238,12 @@ export default function Certificates() {
 
         {/* Certificate Modal */}
         {selectedCert && (
-          <div className={`fixed inset-0 ${currentTheme.modalBg} backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn`}>
-            <div className={`relative ${currentTheme.modalCard} backdrop-blur-xl rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-auto border ${currentTheme.modalBorder} shadow-2xl`}>
+          <div className={`fixed inset-0 ${certTheme.modalBg} backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn`}>
+            <div className={`relative ${certTheme.modalCard} backdrop-blur-xl rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-auto border ${certTheme.modalBorder} shadow-2xl`}>
               {/* Close Button */}
               <button
                 onClick={() => setSelectedCert(null)}
-                className={`absolute top-6 right-6 z-10 w-10 h-10 ${currentTheme.closeButtonBg} ${currentTheme.closeButtonText} rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border ${currentTheme.closeButtonBorder}`}
+                className={`absolute top-6 right-6 z-10 w-10 h-10 ${certTheme.closeButtonBg} ${certTheme.closeButtonText} rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border ${certTheme.closeButtonBorder}`}
               >
                 ×
               </button>
@@ -289,10 +264,10 @@ export default function Certificates() {
                   {/* Content Section */}
                   <div className="space-y-6">
                     <div>
-                      <h2 className={`text-4xl font-bold mb-4 ${currentTheme.modalTitle} bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} bg-clip-text`}>
+                      <h2 className={`text-4xl font-bold mb-4 ${certTheme.modalTitle} bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} bg-clip-text`}>
                         {selectedCert.title}
                       </h2>
-                      <p className={`${currentTheme.modalText} text-xl font-medium mb-6`}>
+                      <p className={`${certTheme.modalText} text-xl font-medium mb-6`}>
                         {selectedCert.subtitle}
                       </p>
                     </div>
@@ -300,15 +275,15 @@ export default function Certificates() {
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
                         <div className={`w-3 h-3 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} rounded-full`}></div>
-                        <span className={currentTheme.modalSubText}>Professional Certification</span>
+                        <span className={certTheme.modalSubText}>Professional Certification</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className={`w-3 h-3 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} rounded-full`}></div>
-                        <span className={currentTheme.modalSubText}>Industry Recognized</span>
+                        <span className={certTheme.modalSubText}>Industry Recognized</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className={`w-3 h-3 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} rounded-full`}></div>
-                        <span className={currentTheme.modalSubText}>Advanced Skill Level</span>
+                        <span className={certTheme.modalSubText}>Advanced Skill Level</span>
                       </div>
                     </div>
 

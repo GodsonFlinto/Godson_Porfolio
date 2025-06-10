@@ -18,7 +18,7 @@ function App() {
         <Header />
 
         {/* Main content: spacing below fixed header */}
-        <main className="pt-28">
+        <main className="pt-22">
           <Hero />
           <About />
           <Education />

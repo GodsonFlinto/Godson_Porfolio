@@ -301,8 +301,8 @@ export default function Achievement() {
           <div className='w-3/5 space-y-8'>
             {/* Title */}
             <div>
-              <h1 className={`text-5xl font-bold mb-4 ${currentTheme.titleText} leading-tight`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>
-                <span className={`text-transparent ${currentTheme.gradientText} bg-clip-text`}>Achievement</span>
+              <h1 className={`text-5xl font-bold mb-4  ${currentTheme.titleText} leading-tight`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>
+                <span className={`text-transparent ${currentTheme.gradientText} bg-clip-text pl-56`}>Achievement</span>
               </h1>
            <div className={`w-24 h-1 ${currentTheme.gradientText} mx-auto rounded-full`}></div>
             </div>

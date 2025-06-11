@@ -123,6 +123,7 @@ export default function Education() {
    <>
      <GoogleFonts />
      <section 
+       id='education'
        className={`${currentTheme.background} px-3 sm:px-6 py-20 relative overflow-hidden min-h-screen transition-all duration-500`}
        style={{fontFamily: 'Josefin Sans, sans-serif', ...currentTheme.backgroundStyle}}
      >

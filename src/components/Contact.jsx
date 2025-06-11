@@ -33,11 +33,11 @@ export default function Contact() {
     email: "mailto:flintogodson@gmail.com",
     phone: "tel:8072017039",
     call: "8072017039",
-    location: "Bilimora, Gujarat, India",
+    location: "Thoothukudi, Tamilnadu, India",
     sociallink: {
       gmail: "mailto:flintogodson@gmail.com",
       github: "https://github.com/GodsonFlinto",
-      linkedin: "https://www.linkedin.com/in/your-link-here",
+      linkedin: "https://www.linkedin.com/in/godson-flinto-j-516867267",
       whatsapp: "https://wa.me/918072017039",
       instagram: "https://instagram.com/godsonflinto3",
       facebook: "https://facebook.com/"
@@ -238,16 +238,16 @@ export default function Contact() {
           {/* ------------ Desktop Layout ------------ */}
           <div className="hidden md:grid md:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div className={`${currentTheme.skillCard} rounded-3xl p-8 shadow-lg border transition-all duration-500`}>
+            <div className="space-y-3">
+              <div className={`${currentTheme.skillCard} rounded-3xl p-4 shadow-lg border transition-all duration-500`}>
                 <h2 className={`text-3xl font-bold ${currentTheme.titleText} mb-8 flex items-center gap-3`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>
                   <FiSend className={`${currentTheme.gradientText.includes('cyan') ? 'text-cyan-400' : 'text-teal-500'}`} size={28} />
                   Contact Information
                 </h2>
                 
-                <div className="space-y-6">
+                <div className="space-y-3">
                   {/* Email */}
-                  <div className={`flex items-start gap-4 p-6 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
+                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
                     <div className={`bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} p-4 rounded-full`}>
                       <FiMail className="text-white" size={20} />
                     </div>
@@ -264,7 +264,7 @@ export default function Contact() {
                   </div>
 
                   {/* Phone */}
-                  <div className={`flex items-start gap-4 p-6 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
+                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
                     <div className={`bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-full`}>
                       <FiPhoneCall className="text-white" size={20} />
                     </div>
@@ -281,7 +281,7 @@ export default function Contact() {
                   </div>
 
                   {/* Location */}
-                  <div className={`flex items-start gap-4 p-6 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
+                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
                     <div className={`bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-full`}>
                       <FiMapPin className="text-white" size={20} />
                     </div>
@@ -294,7 +294,7 @@ export default function Contact() {
               </div>
 
               {/* Social Links */}
-              <div className={`${currentTheme.skillCard} rounded-3xl p-8 shadow-lg border transition-all duration-500`}>
+              <div className={`${currentTheme.skillCard} rounded-3xl p-6 shadow-lg border transition-all duration-500`}>
                 <h3 className={`text-2xl font-bold ${currentTheme.titleText} mb-6 text-center`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>Connect With Me</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   {socialLinks.map((social, index) => (
@@ -314,7 +314,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className={`${currentTheme.skillCard} rounded-3xl p-8 shadow-lg border transition-all duration-500`}>
+            <div className={`${currentTheme.skillCard} rounded-3xl p-4 shadow-lg border transition-all duration-500`}>
               <h2 className={`text-3xl font-bold ${currentTheme.titleText} mb-8 text-center`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>Send Message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">

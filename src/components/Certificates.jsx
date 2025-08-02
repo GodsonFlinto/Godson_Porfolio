@@ -133,21 +133,13 @@ export default function Certificates() {
           )}
         </button>
 
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl animate-pulse`}></div>
-          <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl animate-bounce`} style={{animationDuration: '4s'}}></div>
-          <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg animate-ping`} style={{animationDuration: '3s'}}></div>
-          <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl animate-pulse`} style={{animationDuration: '5s'}}></div>
-        </div>
-
         <div className="w-full relative z-10 max-w-7xl mx-auto">
           {/* Title Section */}
           <div className="text-center mb-20">
-            <h1 className={`text-6xl md:text-5xl font-bold ${currentTheme.titleText} mb-6 tracking-tight`}>
+            <h1 className={`text-5xl md:text-5xl font-bold ${currentTheme.titleText} mb-6 tracking-tight`}>
               <span className={`${currentTheme.gradientText}`}>Certificates</span>
             </h1>
-            <div className={`w-32 h-1 ${certTheme.dividerBg} mx-auto rounded-full`}></div>
+            {/* <div className={`w-32 h-1 ${certTheme.dividerBg} mx-auto rounded-full`}></div> */}
           </div>
 
           {/* Certificates Grid */}
@@ -239,20 +231,20 @@ export default function Certificates() {
         {/* Certificate Modal */}
         {selectedCert && (
           <div className={`fixed inset-0 ${certTheme.modalBg} backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn`}>
-            <div className={`relative ${certTheme.modalCard} backdrop-blur-xl rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-auto border ${certTheme.modalBorder} shadow-2xl`}>
+            <div className={`relative ${certTheme.modalCard} backdrop-blur-xl rounded-3xl max-w-2xl md:max-w-4xl w-full max-h-[85vh] md:max-h-[90vh] overflow-auto border ${certTheme.modalBorder} shadow-2xl`}>
               {/* Close Button */}
               <button
                 onClick={() => setSelectedCert(null)}
-                className={`absolute top-6 right-6 z-10 w-10 h-10 ${certTheme.closeButtonBg} ${certTheme.closeButtonText} rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border ${certTheme.closeButtonBorder}`}
+                className={`absolute top-4 right-4 md:top-6 md:right-6 z-10 w-8 h-8 md:w-10 md:h-10 ${certTheme.closeButtonBg} ${certTheme.closeButtonText} rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 border ${certTheme.closeButtonBorder} text-lg md:text-xl`}
               >
                 ×
               </button>
 
               {/* Modal Content */}
-              <div className="p-8">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="p-6 md:p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                   {/* Image Section */}
-                  <div className="relative">
+                  <div className="relative order-2 md:order-1">
                     <div className={`absolute inset-0 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} opacity-20 rounded-2xl blur-xl`}></div>
                     <img
                       src={selectedCert.image}
@@ -262,38 +254,38 @@ export default function Certificates() {
                   </div>
 
                   {/* Content Section */}
-                  <div className="space-y-6">
+                  <div className="space-y-4 md:space-y-6 order-1 md:order-2">
                     <div>
-                      <h2 className={`text-4xl font-bold mb-4 ${certTheme.modalTitle} bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} bg-clip-text`}>
+                      <h2 className={`text-2xl md:text-4xl font-bold mb-3 md:mb-4 ${certTheme.modalTitle} bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} bg-clip-text`}>
                         {selectedCert.title}
                       </h2>
-                      <p className={`${certTheme.modalText} text-xl font-medium mb-6`}>
+                      <p className={`${certTheme.modalText} text-lg md:text-xl font-medium mb-4 md:mb-6`}>
                         {selectedCert.subtitle}
                       </p>
                     </div>
 
-                    <div className="space-y-4">
+                    <div className="space-y-3 md:space-y-4">
                       <div className="flex items-center gap-3">
                         <div className={`w-3 h-3 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} rounded-full`}></div>
-                        <span className={certTheme.modalSubText}>Professional Certification</span>
+                        <span className={`${certTheme.modalSubText} text-sm md:text-base`}>Professional Certification</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className={`w-3 h-3 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} rounded-full`}></div>
-                        <span className={certTheme.modalSubText}>Industry Recognized</span>
+                        <span className={`${certTheme.modalSubText} text-sm md:text-base`}>Industry Recognized</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <div className={`w-3 h-3 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} rounded-full`}></div>
-                        <span className={certTheme.modalSubText}>Advanced Skill Level</span>
+                        <span className={`${certTheme.modalSubText} text-sm md:text-base`}>Advanced Skill Level</span>
                       </div>
                     </div>
 
-                    <div className="pt-6">
-                      <button
+                    <div className="pt-4 md:pt-6">
+                      {/* <button
                         onClick={() => setSelectedCert(null)}
-                        className={`px-8 py-3 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${isDarkTheme ? 'hover:shadow-cyan-500/25' : 'hover:shadow-[#129990]/25'}`}
+                        className={`w-full md:w-auto px-6 md:px-8 py-2.5 md:py-3 bg-gradient-to-r ${isDarkTheme ? selectedCert.color : selectedCert.lightColor} text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${isDarkTheme ? 'hover:shadow-cyan-500/25' : 'hover:shadow-[#129990]/25'} text-sm md:text-base`}
                       >
                         View Original Certificate
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>

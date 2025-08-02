@@ -101,15 +101,15 @@ export default function Contact() {
               
               <div className="space-y-4">
                 {/* Email */}
-                <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
-                  <div className={`bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} p-3 rounded-full`}>
+                <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border hover:shadow-lg hover:scale-105 cursor-pointer group`}>
+                  <div className={`bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} p-3 rounded-full group-hover:scale-110 transition-transform duration-300`}>
                     <FiMail className="text-white" size={18} />
                   </div>
                   <div className="flex-1">
                     <h3 className={`${currentTheme.titleText} font-semibold mb-1 text-sm`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>Email</h3>
                     <a 
                       href={config.email} 
-                      className={`${currentTheme.bodyText} text-sm`}
+                      className={`${currentTheme.bodyText} text-sm hover:text-cyan-400 transition-colors duration-300`}
                       style={{fontFamily: 'Josefin Sans, sans-serif'}}
                     >
                       {config.gmail}
@@ -118,15 +118,15 @@ export default function Contact() {
                 </div>
 
                 {/* Phone */}
-                <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
-                  <div className={`bg-gradient-to-r from-green-500 to-emerald-500 p-3 rounded-full`}>
+                <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border hover:shadow-lg hover:scale-105 cursor-pointer group`}>
+                  <div className={`bg-gradient-to-r from-green-500 to-emerald-500 p-3 rounded-full group-hover:scale-110 transition-transform duration-300`}>
                     <FiPhoneCall className="text-white" size={18} />
                   </div>
                   <div className="flex-1">
                     <h3 className={`${currentTheme.titleText} font-semibold mb-1 text-sm`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>Phone</h3>
                     <a 
                       href={config.phone} 
-                      className={`${currentTheme.bodyText} text-sm`}
+                      className={`${currentTheme.bodyText} text-sm hover:text-green-400 transition-colors duration-300`}
                       style={{fontFamily: 'Josefin Sans, sans-serif'}}
                     >
                       {config.call}
@@ -135,8 +135,8 @@ export default function Contact() {
                 </div>
 
                 {/* Location */}
-                <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
-                  <div className={`bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-full`}>
+                <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border hover:shadow-lg hover:scale-105 cursor-pointer group`}>
+                  <div className={`bg-gradient-to-r from-purple-500 to-pink-500 p-3 rounded-full group-hover:scale-110 transition-transform duration-300`}>
                     <FiMapPin className="text-white" size={18} />
                   </div>
                   <div className="flex-1">
@@ -157,7 +157,7 @@ export default function Contact() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${currentTheme.skillCard} p-3 rounded-xl ${currentTheme.titleText} border`}
+                    className={`${currentTheme.skillCard} p-3 rounded-xl ${currentTheme.titleText} border hover:scale-110 hover:shadow-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-cyan-500/10 hover:to-blue-500/10`}
                     title={social.label}
                   >
                     <social.icon size={20} />
@@ -225,7 +225,7 @@ export default function Contact() {
                 
                 <button
                   type="submit"
-                  className={`w-full bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-3`}
+                  className={`w-full bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg hover:scale-105 transition-all duration-300`}
                   style={{fontFamily: 'Josefin Sans, sans-serif'}}
                 >
                   <FiSend size={18} />
@@ -247,15 +247,15 @@ export default function Contact() {
                 
                 <div className="space-y-3">
                   {/* Email */}
-                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
-                    <div className={`bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} p-4 rounded-full`}>
+                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border hover:shadow-lg hover:scale-105 cursor-pointer group`}>
+                    <div className={`bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} p-4 rounded-full group-hover:scale-110 transition-transform duration-300`}>
                       <FiMail className="text-white" size={20} />
                     </div>
                     <div>
                       <h3 className={`${currentTheme.titleText} font-semibold mb-2`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>Email</h3>
                       <a 
                         href={config.email} 
-                        className={`${currentTheme.bodyText}`}
+                        className={`${currentTheme.bodyText} hover:text-cyan-400 transition-colors duration-300`}
                         style={{fontFamily: 'Josefin Sans, sans-serif'}}
                       >
                         {config.gmail}
@@ -264,15 +264,15 @@ export default function Contact() {
                   </div>
 
                   {/* Phone */}
-                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
-                    <div className={`bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-full`}>
+                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border hover:shadow-lg hover:scale-105 cursor-pointer group`}>
+                    <div className={`bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-full group-hover:scale-110 transition-transform duration-300`}>
                       <FiPhoneCall className="text-white" size={20} />
                     </div>
                     <div>
                       <h3 className={`${currentTheme.titleText} font-semibold mb-2`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>Phone</h3>
                       <a 
                         href={config.phone} 
-                        className={`${currentTheme.bodyText}`}
+                        className={`${currentTheme.bodyText} hover:text-green-400 transition-colors duration-300`}
                         style={{fontFamily: 'Josefin Sans, sans-serif'}}
                       >
                         {config.call}
@@ -281,8 +281,8 @@ export default function Contact() {
                   </div>
 
                   {/* Location */}
-                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border`}>
-                    <div className={`bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-full`}>
+                  <div className={`flex items-start gap-4 p-4 rounded-2xl ${currentTheme.skillCard} transition-all duration-300 border hover:shadow-lg hover:scale-105 cursor-pointer group`}>
+                    <div className={`bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-full group-hover:scale-110 transition-transform duration-300`}>
                       <FiMapPin className="text-white" size={20} />
                     </div>
                     <div>
@@ -303,7 +303,7 @@ export default function Contact() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`${currentTheme.skillCard} p-4 rounded-2xl ${currentTheme.titleText} border`}
+                      className={`${currentTheme.skillCard} p-4 rounded-2xl ${currentTheme.titleText} border hover:scale-110 hover:shadow-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-cyan-500/10 hover:to-blue-500/10`}
                       title={social.label}
                     >
                       <social.icon size={24} />
@@ -373,7 +373,7 @@ export default function Contact() {
                 
                 <button
                   type="submit"
-                  className={`w-full bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center gap-3`}
+                  className={`w-full bg-gradient-to-r ${currentTheme.gradientText.includes('cyan') ? 'from-cyan-500 to-blue-500' : 'from-teal-500 to-teal-600'} text-white font-semibold py-4 px-6 rounded-xl flex items-center justify-center gap-3 hover:shadow-lg hover:scale-105 transition-all duration-300`}
                   style={{fontFamily: 'Josefin Sans, sans-serif'}}
                 >
                   <FiSend size={20} />

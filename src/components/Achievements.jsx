@@ -223,12 +223,12 @@ export default function Achievement() {
           )}
         </button>  
 
-        {/* Animated Background Elements */}
+        {/* Static Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl animate-pulse`}></div>
-          <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl animate-bounce`} style={{animationDuration: '4s'}}></div>
-          <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg animate-ping`} style={{animationDuration: '3s'}}></div>
-          <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl animate-pulse`} style={{animationDuration: '5s'}}></div>
+          <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl`}></div>
+          <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl`}></div>
+          <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg`}></div>
+          <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl`}></div>
         </div>
 
         {/* ------------ Mobile Layout ------------ */}
@@ -238,20 +238,20 @@ export default function Achievement() {
             <h1 className={`text-4xl font-bold mb-4 ${currentTheme.titleText}`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>
               My <span className={`text-transparent ${currentTheme.gradientText} bg-clip-text`}>Achievement</span>
             </h1>
-            <div className={`w-24 h-1 ${currentTheme.gradientText} mx-auto rounded-full mb-6`}></div>
+            {/* <div className={`w-24 h-1 ${currentTheme.gradientText} mx-auto rounded-full mb-6`}></div> */}
           </div>
 
           {/* Video Container */}
           <div className="relative w-full max-w-sm mx-auto">
-            {/* Glow Effects */}
-            <div className={`absolute inset-0 ${currentTheme.videoGlow1} rounded-3xl blur-2xl scale-110 animate-pulse`}></div>
-            <div className={`absolute inset-0 ${currentTheme.videoGlow2} rounded-3xl blur-xl scale-105 animate-pulse`} style={{animationDelay: '1s'}}></div>
+            {/* Static Glow Effects */}
+            <div className={`absolute inset-0 ${currentTheme.videoGlow1} rounded-3xl blur-2xl scale-110`}></div>
+            <div className={`absolute inset-0 ${currentTheme.videoGlow2} rounded-3xl blur-xl scale-105`}></div>
             
-            {/* Floating Particles */}
-            <div className={`absolute -top-4 -left-4 w-3 h-3 ${currentTheme.particle1} rounded-full animate-ping opacity-70`}></div>
-            <div className={`absolute -top-2 -right-2 w-2 h-2 ${currentTheme.particle2} rounded-full animate-ping opacity-60`} style={{animationDelay: '0.5s'}}></div>
-            <div className={`absolute -bottom-4 -right-4 w-4 h-4 ${currentTheme.particle3} rounded-full animate-ping opacity-50`} style={{animationDelay: '1s'}}></div>
-            <div className={`absolute -bottom-2 -left-2 w-2 h-2 ${currentTheme.particle4} rounded-full animate-ping opacity-80`} style={{animationDelay: '1.5s'}}></div>
+            {/* Static Floating Particles */}
+            <div className={`absolute -top-4 -left-4 w-3 h-3 ${currentTheme.particle1} rounded-full opacity-70`}></div>
+            <div className={`absolute -top-2 -right-2 w-2 h-2 ${currentTheme.particle2} rounded-full opacity-60`}></div>
+            <div className={`absolute -bottom-4 -right-4 w-4 h-4 ${currentTheme.particle3} rounded-full opacity-50`}></div>
+            <div className={`absolute -bottom-2 -left-2 w-2 h-2 ${currentTheme.particle4} rounded-full opacity-80`}></div>
             
             <div className={`relative ${currentTheme.videoContainer} rounded-3xl p-4 shadow-2xl border overflow-hidden`}>
               <VideoWithCover isMobile={true} />
@@ -304,7 +304,7 @@ export default function Achievement() {
               <h1 className={`text-5xl font-bold mb-4  ${currentTheme.titleText} leading-tight`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>
                 <span className={`text-transparent ${currentTheme.gradientText} bg-clip-text pl-56`}>Achievement</span>
               </h1>
-           <div className={`w-24 h-1 ${currentTheme.gradientText} mx-auto rounded-full`}></div>
+           {/* <div className={`w-24 h-1 ${currentTheme.gradientText} mx-auto rounded-full`}></div> */}
             </div>
 
             {/* Achievement Card */}
@@ -347,21 +347,21 @@ export default function Achievement() {
           </div>
 
           {/* Right Side - Video */}
-          <div className='w-2/5 flex justify-center animate-float'>
+          <div className='w-2/5 flex justify-center'>
             <div className="relative">
-              {/* Multiple Layered Glow Effects */}
-              <div className={`absolute inset-0 ${currentTheme.videoGlow1} rounded-3xl blur-3xl scale-110 animate-pulse`}></div>
-              <div className={`absolute inset-0 ${currentTheme.videoGlow2} rounded-3xl blur-2xl scale-105 animate-pulse`} style={{animationDelay: '1s'}}></div>
+              {/* Static Glow Effects */}
+              <div className={`absolute inset-0 ${currentTheme.videoGlow1} rounded-3xl blur-3xl scale-110`}></div>
+              <div className={`absolute inset-0 ${currentTheme.videoGlow2} rounded-3xl blur-2xl scale-105`}></div>
               
-              {/* Animated Border Rings */}
-              <div className={`absolute inset-0 border-2 ${currentTheme.videoBorder1} rounded-3xl animate-spin`} style={{animationDuration: '20s'}}></div>
-              <div className={`absolute inset-4 border ${currentTheme.videoBorder2} rounded-3xl animate-spin`} style={{animationDuration: '15s', animationDirection: 'reverse'}}></div>
+              {/* Static Border Rings */}
+              <div className={`absolute inset-0 border-2 ${currentTheme.videoBorder1} rounded-3xl`}></div>
+              <div className={`absolute inset-4 border ${currentTheme.videoBorder2} rounded-3xl`}></div>
               
-              {/* Floating Particles */}
-              <div className={`absolute -top-6 -left-6 w-4 h-4 ${currentTheme.particle1} rounded-full animate-ping opacity-70`}></div>
-              <div className={`absolute -top-4 -right-4 w-3 h-3 ${currentTheme.particle2} rounded-full animate-ping opacity-60`} style={{animationDelay: '0.5s'}}></div>
-              <div className={`absolute -bottom-6 -right-6 w-5 h-5 ${currentTheme.particle3} rounded-full animate-ping opacity-50`} style={{animationDelay: '1s'}}></div>
-              <div className={`absolute -bottom-4 -left-4 w-2 h-2 ${currentTheme.particle4} rounded-full animate-ping opacity-80`} style={{animationDelay: '1.5s'}}></div>
+              {/* Static Floating Particles */}
+              <div className={`absolute -top-6 -left-6 w-4 h-4 ${currentTheme.particle1} rounded-full opacity-70`}></div>
+              <div className={`absolute -top-4 -right-4 w-3 h-3 ${currentTheme.particle2} rounded-full opacity-60`}></div>
+              <div className={`absolute -bottom-6 -right-6 w-5 h-5 ${currentTheme.particle3} rounded-full opacity-50`}></div>
+              <div className={`absolute -bottom-4 -left-4 w-2 h-2 ${currentTheme.particle4} rounded-full opacity-80`}></div>
               
               <div className={`relative ${currentTheme.videoContainer} rounded-3xl p-6 shadow-2xl border overflow-hidden`}>
                 <VideoWithCover />
@@ -369,19 +369,6 @@ export default function Achievement() {
             </div>
           </div>
         </div>
-
-        <style jsx>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-10px) rotate(0.5deg); }
-            66% { transform: translateY(-5px) rotate(-0.5deg); }
-          }
-          
-          .animate-float {
-            animation: float 6s ease-in-out infinite;
-            animation-delay: 1s;
-          }
-        `}</style>
       </section>
     </>
   );

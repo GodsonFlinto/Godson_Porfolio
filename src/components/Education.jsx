@@ -139,22 +139,22 @@ export default function Education() {
          )}
        </button>
 
-       {/* Animated Background Elements */}
+       {/* Simple Static Background Elements - No Animation */}
        <div className="absolute inset-0 overflow-hidden">
-         <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl animate-pulse`}></div>
-         <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl animate-bounce`} style={{animationDuration: '4s'}}></div>
-         <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg animate-ping`} style={{animationDuration: '3s'}}></div>
-         <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl animate-pulse`} style={{animationDuration: '5s'}}></div>
+         <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl opacity-20`}></div>
+         <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl opacity-15`}></div>
+         <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg opacity-15`}></div>
+         <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl opacity-10`}></div>
        </div>
 
-       {/* Floating Particles */}
+       {/* Static Floating Particles - No Animation */}
        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-         <div className={`absolute top-20 left-20 w-3 h-3 ${currentTheme.particle1} rounded-full animate-ping opacity-60`}></div>
-         <div className={`absolute top-40 right-32 w-2 h-2 ${currentTheme.particle2} rounded-full animate-ping opacity-70`} style={{animationDelay: '1s'}}></div>
-         <div className={`absolute bottom-40 left-32 w-4 h-4 ${currentTheme.particle3} rounded-full animate-ping opacity-50`} style={{animationDelay: '2s'}}></div>
-         <div className={`absolute bottom-20 right-20 w-2 h-2 ${currentTheme.particle4} rounded-full animate-ping opacity-80`} style={{animationDelay: '3s'}}></div>
-         <div className={`absolute top-1/2 left-10 w-3 h-3 ${currentTheme.particle5} rounded-full animate-ping opacity-60`} style={{animationDelay: '4s'}}></div>
-         <div className={`absolute top-3/4 right-10 w-2 h-2 ${currentTheme.particle6} rounded-full animate-ping opacity-70`} style={{animationDelay: '5s'}}></div>
+         <div className={`absolute top-20 left-20 w-3 h-3 ${currentTheme.particle1} rounded-full opacity-35`}></div>
+         <div className={`absolute top-40 right-32 w-2 h-2 ${currentTheme.particle2} rounded-full opacity-40`}></div>
+         <div className={`absolute bottom-40 left-32 w-4 h-4 ${currentTheme.particle3} rounded-full opacity-30`}></div>
+         <div className={`absolute bottom-20 right-20 w-2 h-2 ${currentTheme.particle4} rounded-full opacity-45`}></div>
+         <div className={`absolute top-1/2 left-10 w-3 h-3 ${currentTheme.particle5} rounded-full opacity-35`}></div>
+         <div className={`absolute top-3/4 right-10 w-2 h-2 ${currentTheme.particle6} rounded-full opacity-40`}></div>
        </div>
 
        <div className="relative z-10 max-w-6xl mx-auto">
@@ -163,7 +163,7 @@ export default function Education() {
            <h2 className={`text-4xl md:text-5xl font-bold ${currentTheme.primaryText} mb-4`} style={{fontFamily: 'Josefin Sans, sans-serif'}}>
              <span className={`text-transparent ${currentTheme.gradientText} bg-clip-text`}>Education</span>
            </h2>
-           <div className={`w-24 h-1 ${currentTheme.gradientText} mx-auto rounded-full`}></div>
+           {/* <div className={`w-24 h-1 ${currentTheme.gradientText} mx-auto rounded-full`}></div> */}
          </div>
 
          {/* Education Cards - Grid Layout for three cards */}
@@ -173,9 +173,9 @@ export default function Education() {
                key={index}
                className={`group relative ${currentTheme.cardBg} backdrop-blur-xl rounded-2xl p-6 shadow-xl border ${currentTheme.cardBorder} ${currentTheme.cardHoverBorder} transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 overflow-hidden`}
              >
-               {/* Card Glow Effects */}
-               <div className={`absolute inset-0 ${currentTheme.cardGlow1} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-               <div className={`absolute inset-0 ${currentTheme.cardGlow2} rounded-2xl blur-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-700`}></div>
+               {/* Static Card Glow Effects - No Animation */}
+               <div className={`absolute inset-0 ${currentTheme.cardGlow1} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
+               <div className={`absolute inset-0 ${currentTheme.cardGlow2} rounded-2xl blur-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-700`}></div>
                
                <div className="relative z-10 space-y-4">
                  {/* Header with Icon and Period */}
@@ -247,13 +247,29 @@ export default function Education() {
        </div>
 
        <style jsx>{`
-         @keyframes float {
-           0%, 100% { transform: translateY(0px); }
-           50% { transform: translateY(-10px); }
+         /* Smooth transitions for all interactive elements */
+         .group {
+           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
          }
          
-         .animate-float {
-           animation: float 4s ease-in-out infinite;
+         /* Enhanced hover effects for education cards */
+         .group:hover {
+           transform: translateY(-8px) scale(1.05);
+         }
+         
+         /* Icon hover effects */
+         .group .group-hover\\:scale-110 {
+           transition: transform 0.3s ease;
+         }
+         
+         /* Glow effects on hover */
+         .group:hover .opacity-0 {
+           opacity: 0.3;
+         }
+         
+         /* Theme toggle button hover */
+         button:hover {
+           transform: scale(1.1);
          }
        `}</style>
      </section>

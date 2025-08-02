@@ -123,34 +123,34 @@ export default function Hero() {
           )}
         </button>
 
-        {/* Simple Static Background Elements - No Animation */}
+        {/* Optimized Background Elements - Slower, smoother animations */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl opacity-20`}></div>
-          <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl opacity-15`}></div>
-          <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg opacity-15`}></div>
-          <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl opacity-10`}></div>
+          <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl opacity-25 animate-pulse-slow`}></div>
+          <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl opacity-20 animate-float-slow`}></div>
+          <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg opacity-15 animate-pulse-slower`}></div>
+          <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl opacity-18 animate-glow-soft`}></div>
         </div>
 
         {/* ------------ Mobile Layout ------------ */}
         <div className='md:hidden flex flex-col items-center relative z-10 max-w-4xl mx-auto w-full pb-6 pt-2'>
           {/* Image */}
           <div className="relative mb-4 -mt-12">
-            {/* Static Glow Layers - No Animation */}
-            <div className={`absolute inset-0 ${currentTheme.imageGlow1} rounded-full blur-3xl scale-125 opacity-10`}></div>
-            <div className={`absolute inset-0 ${currentTheme.imageGlow2} rounded-full blur-2xl scale-110 opacity-15`}></div>
+            {/* Optimized Glow Layers - Slower animations */}
+            <div className={`absolute inset-0 ${currentTheme.imageGlow1} rounded-full blur-3xl scale-125 opacity-15 animate-glow-soft`}></div>
+            <div className={`absolute inset-0 ${currentTheme.imageGlow2} rounded-full blur-2xl scale-110 opacity-20 animate-pulse-slow`}></div>
                          
-            {/* Static Border Rings - No Animation */}
-            <div className={`absolute inset-0 border-2 ${currentTheme.imageBorder1} rounded-full opacity-30`}></div>
-            <div className={`absolute inset-2 border ${currentTheme.imageBorder2} rounded-full opacity-20`}></div>
+            {/* Optimized Border Rings - Much slower rotation */}
+            <div className={`absolute inset-0 border-2 ${currentTheme.imageBorder1} rounded-full opacity-30 animate-spin-ultra-slow`}></div>
+            <div className={`absolute inset-2 border ${currentTheme.imageBorder2} rounded-full opacity-20 animate-spin-reverse-ultra-slow`}></div>
                          
-            {/* Static Particles - No Animation */}
-            <div className={`absolute -top-6 -left-6 w-4 h-4 ${currentTheme.particle1} rounded-full opacity-40`}></div>
-            <div className={`absolute -top-4 -right-4 w-3 h-3 ${currentTheme.particle2} rounded-full opacity-35`}></div>
-            <div className={`absolute -bottom-6 -right-6 w-5 h-5 ${currentTheme.particle3} rounded-full opacity-30`}></div>
-            <div className={`absolute -bottom-4 -left-4 w-2 h-2 ${currentTheme.particle4} rounded-full opacity-45`}></div>
+            {/* Optimized Particles - Slower, staggered animations */}
+            <div className={`absolute -top-6 -left-6 w-4 h-4 ${currentTheme.particle1} rounded-full opacity-50 animate-ping-slow`}></div>
+            <div className={`absolute -top-4 -right-4 w-3 h-3 ${currentTheme.particle2} rounded-full opacity-45 animate-ping-slower`}></div>
+            <div className={`absolute -bottom-6 -right-6 w-5 h-5 ${currentTheme.particle3} rounded-full opacity-40 animate-ping-slowest`}></div>
+            <div className={`absolute -bottom-4 -left-4 w-2 h-2 ${currentTheme.particle4} rounded-full opacity-60 animate-ping-slow`}></div>
                          
             <div className={`relative ${currentTheme.imageContainer} rounded-full p-4 shadow-2xl border overflow-hidden`}>
-              <div className={`absolute inset-0 ${currentTheme.imageInnerGlow1} rounded-full pointer-events-none opacity-20`}></div>
+              <div className={`absolute inset-0 ${currentTheme.imageInnerGlow1} rounded-full pointer-events-none opacity-25 animate-glow-soft`}></div>
               <img 
                 src={Heroimg} 
                 alt='Godson Flinto J - Front End Developer' 
@@ -282,31 +282,31 @@ export default function Hero() {
           </div>
 
           {/* Image section */}
-          <div className="w-1/2 flex justify-center">
+          <div className="w-1/2 flex justify-center animate-float-gentle">
             <div className="relative">
-              {/* Static Glow Effects - No Animation */}
-              <div className={`absolute inset-0 ${currentTheme.imageGlow3} rounded-full blur-3xl scale-125 opacity-10`}></div>
-              <div className={`absolute inset-0 ${currentTheme.imageGlow4} rounded-full blur-2xl scale-115 opacity-15`}></div>
-              <div className={`absolute inset-0 ${currentTheme.imageGlow5} rounded-full blur-xl scale-105 opacity-12`}></div>
+              {/* Optimized Glow Effects - Slower animations */}
+              <div className={`absolute inset-0 ${currentTheme.imageGlow3} rounded-full blur-3xl scale-125 opacity-15 animate-glow-soft`}></div>
+              <div className={`absolute inset-0 ${currentTheme.imageGlow4} rounded-full blur-2xl scale-115 opacity-20 animate-pulse-slow`}></div>
+              <div className={`absolute inset-0 ${currentTheme.imageGlow5} rounded-full blur-xl scale-105 opacity-18 animate-glow-softer`}></div>
               
-              {/* Static Border Rings - No Animation */}
-              <div className={`absolute inset-0 border-2 ${currentTheme.imageBorder3} rounded-full opacity-30`}></div>
-              <div className={`absolute inset-6 border ${currentTheme.imageBorder4} rounded-full opacity-20`}></div>
-              <div className={`absolute inset-12 border ${currentTheme.imageBorder5} rounded-full opacity-15`}></div>
+              {/* Optimized Border Rings - Much slower rotation */}
+              <div className={`absolute inset-0 border-2 ${currentTheme.imageBorder3} rounded-full opacity-25 animate-spin-ultra-slow`}></div>
+              <div className={`absolute inset-6 border ${currentTheme.imageBorder4} rounded-full opacity-20 animate-spin-reverse-ultra-slow`}></div>
+              <div className={`absolute inset-12 border ${currentTheme.imageBorder5} rounded-full opacity-15 animate-spin-mega-slow`}></div>
               
-              {/* Static Particles - No Animation */}
-              <div className={`absolute -top-8 -left-8 w-6 h-6 ${currentTheme.particle1} rounded-full opacity-40`}></div>
-              <div className={`absolute -top-4 -right-6 w-4 h-4 ${currentTheme.particle2} rounded-full opacity-35`}></div>
-              <div className={`absolute -bottom-8 -right-8 w-8 h-8 ${currentTheme.particle3} rounded-full opacity-30`}></div>
-              <div className={`absolute -bottom-6 -left-6 w-3 h-3 ${currentTheme.particle4} rounded-full opacity-45`}></div>
-              <div className={`absolute top-1/4 -right-4 w-2 h-2 ${currentTheme.particle5} rounded-full opacity-50`}></div>
-              <div className={`absolute bottom-1/4 -left-4 w-5 h-5 ${currentTheme.particle6} rounded-full opacity-35`}></div>
+              {/* Optimized Particles - Slower, staggered animations */}
+              <div className={`absolute -top-8 -left-8 w-6 h-6 ${currentTheme.particle1} rounded-full opacity-50 animate-ping-slow`}></div>
+              <div className={`absolute -top-4 -right-6 w-4 h-4 ${currentTheme.particle2} rounded-full opacity-45 animate-ping-slower`}></div>
+              <div className={`absolute -bottom-8 -right-8 w-8 h-8 ${currentTheme.particle3} rounded-full opacity-40 animate-ping-slowest`}></div>
+              <div className={`absolute -bottom-6 -left-6 w-3 h-3 ${currentTheme.particle4} rounded-full opacity-60 animate-ping-slow`}></div>
+              <div className={`absolute top-1/4 -right-4 w-2 h-2 ${currentTheme.particle5} rounded-full opacity-70 animate-ping-slower`}></div>
+              <div className={`absolute bottom-1/4 -left-4 w-5 h-5 ${currentTheme.particle6} rounded-full opacity-45 animate-ping-slowest`}></div>
               
               <div className={`relative ${currentTheme.imageContainer} rounded-full p-10 shadow-2xl border overflow-hidden`}>
-                {/* Static inner glow - No Animation */}
-                <div className={`absolute inset-0 ${currentTheme.imageInnerGlow2} rounded-full pointer-events-none opacity-20`}></div>
-                <div className={`absolute top-4 left-4 w-16 h-16 ${currentTheme.imageInnerGlow3} rounded-full blur-xl pointer-events-none opacity-15`}></div>
-                <div className={`absolute bottom-4 right-4 w-20 h-20 ${currentTheme.imageInnerGlow4} rounded-full blur-2xl pointer-events-none opacity-10`}></div>
+                {/* Optimized inner glow - Slower animations */}
+                <div className={`absolute inset-0 ${currentTheme.imageInnerGlow2} rounded-full pointer-events-none opacity-25 animate-glow-soft`}></div>
+                <div className={`absolute top-4 left-4 w-16 h-16 ${currentTheme.imageInnerGlow3} rounded-full blur-xl pointer-events-none opacity-20 animate-glow-softer`}></div>
+                <div className={`absolute bottom-4 right-4 w-20 h-20 ${currentTheme.imageInnerGlow4} rounded-full blur-2xl pointer-events-none opacity-15 animate-pulse-slow`}></div>
                 
                 <img 
                   src={Heroimg} 
@@ -424,6 +424,124 @@ export default function Hero() {
         )}
 
         <style>{`
+          /* Optimized Animation Keyframes - Hardware Accelerated */
+          @keyframes float-gentle {
+            0%, 100% { 
+              transform: translate3d(0, 0, 0) rotate(0deg); 
+            }
+            33% { 
+              transform: translate3d(0, -8px, 0) rotate(0.3deg); 
+            }
+            66% { 
+              transform: translate3d(0, -4px, 0) rotate(-0.3deg); 
+            }
+          }
+          
+          @keyframes float-slow {
+            0%, 100% { 
+              transform: translate3d(0, 0, 0); 
+            }
+            50% { 
+              transform: translate3d(0, -6px, 0); 
+            }
+          }
+          
+          @keyframes pulse-slow {
+            0%, 100% { 
+              opacity: 0.6; 
+            }
+            50% { 
+              opacity: 0.3; 
+            }
+          }
+          
+          @keyframes pulse-slower {
+            0%, 100% { 
+              opacity: 0.5; 
+            }
+            50% { 
+              opacity: 0.2; 
+            }
+          }
+          
+          @keyframes glow-soft {
+            0%, 100% { 
+              opacity: 0.3; 
+            }
+            50% { 
+              opacity: 0.1; 
+            }
+          }
+          
+          @keyframes glow-softer {
+            0%, 100% { 
+              opacity: 0.2; 
+            }
+            50% { 
+              opacity: 0.05; 
+            }
+          }
+          
+          @keyframes spin-ultra-slow {
+            from { 
+              transform: rotate(0deg); 
+            }
+            to { 
+              transform: rotate(360deg); 
+            }
+          }
+          
+          @keyframes spin-reverse-ultra-slow {
+            from { 
+              transform: rotate(360deg); 
+            }
+            to { 
+              transform: rotate(0deg); 
+            }
+          }
+          
+          @keyframes spin-mega-slow {
+            from { 
+              transform: rotate(0deg); 
+            }
+            to { 
+              transform: rotate(360deg); 
+            }
+          }
+          
+          @keyframes ping-slow {
+            0% { 
+              transform: scale(1); 
+              opacity: 1; 
+            }
+            75%, 100% { 
+              transform: scale(1.2); 
+              opacity: 0; 
+            }
+          }
+          
+          @keyframes ping-slower {
+            0% { 
+              transform: scale(1); 
+              opacity: 1; 
+            }
+            75%, 100% { 
+              transform: scale(1.15); 
+              opacity: 0; 
+            }
+          }
+          
+          @keyframes ping-slowest {
+            0% { 
+              transform: scale(1); 
+              opacity: 1; 
+            }
+            75%, 100% { 
+              transform: scale(1.1); 
+              opacity: 0; 
+            }
+          }
+          
           @keyframes modal-in {
             0% {
               opacity: 0;
@@ -435,8 +553,98 @@ export default function Hero() {
             }
           }
           
+          /* Apply optimized animations with performance-friendly durations */
+          .animate-float-gentle {
+            animation: float-gentle 8s ease-in-out infinite;
+            animation-delay: 1s;
+            will-change: transform;
+          }
+          
+          .animate-float-slow {
+            animation: float-slow 6s ease-in-out infinite;
+            will-change: transform;
+          }
+          
+          .animate-pulse-slow {
+            animation: pulse-slow 4s ease-in-out infinite;
+            will-change: opacity;
+          }
+          
+          .animate-pulse-slower {
+            animation: pulse-slower 5s ease-in-out infinite;
+            will-change: opacity;
+          }
+          
+          .animate-glow-soft {
+            animation: glow-soft 6s ease-in-out infinite;
+            will-change: opacity;
+          }
+          
+          .animate-glow-softer {
+            animation: glow-softer 7s ease-in-out infinite;
+            will-change: opacity;
+          }
+          
+          .animate-spin-ultra-slow {
+            animation: spin-ultra-slow 30s linear infinite;
+            will-change: transform;
+          }
+          
+          .animate-spin-reverse-ultra-slow {
+            animation: spin-reverse-ultra-slow 40s linear infinite;
+            will-change: transform;
+          }
+          
+          .animate-spin-mega-slow {
+            animation: spin-mega-slow 50s linear infinite;
+            will-change: transform;
+          }
+          
+          .animate-ping-slow {
+            animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+            will-change: transform, opacity;
+          }
+          
+          .animate-ping-slower {
+            animation: ping-slower 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+            will-change: transform, opacity;
+          }
+          
+          .animate-ping-slowest {
+            animation: ping-slowest 5s cubic-bezier(0, 0, 0.2, 1) infinite;
+            will-change: transform, opacity;
+          }
+          
           .animate-modal-in {
             animation: modal-in 0.3s ease-out;
+          }
+
+          /* Performance optimizations */
+          .animate-float-gentle,
+          .animate-float-slow,
+          .animate-spin-ultra-slow,
+          .animate-spin-reverse-ultra-slow,
+          .animate-spin-mega-slow {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+          }
+          
+          /* Reduce motion for users who prefer it */
+          @media (prefers-reduced-motion: reduce) {
+            .animate-float-gentle,
+            .animate-float-slow,
+            .animate-pulse-slow,
+            .animate-pulse-slower,
+            .animate-glow-soft,
+            .animate-glow-softer,
+            .animate-spin-ultra-slow,
+            .animate-spin-reverse-ultra-slow,
+            .animate-spin-mega-slow,
+            .animate-ping-slow,
+            .animate-ping-slower,
+            .animate-ping-slowest {
+              animation: none;
+            }
           }
 
           /* Ensure iframe is responsive and maintains aspect ratio */
@@ -493,9 +701,8 @@ export default function Hero() {
               opacity: 0.5;
             }
           }
-        `}
-        </style>
-        </section>
+        `}</style>
+      </section>
     </>
   );
 }

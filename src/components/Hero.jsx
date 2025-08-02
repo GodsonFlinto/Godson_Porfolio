@@ -123,32 +123,34 @@ export default function Hero() {
           )}
         </button>
 
-        {/* Animated Background Elements */}
+        {/* Simple Static Background Elements - No Animation */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl animate-pulse opacity-30`}></div>
-          <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl animate-bounce opacity-20`} style={{animationDuration: '4s'}}></div>
-          <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg animate-ping opacity-25`} style={{animationDuration: '3s'}}></div>
-          <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl animate-pulse opacity-20`} style={{animationDuration: '5s'}}></div>
+          <div className={`absolute top-32 right-10 w-32 h-32 ${currentTheme.bgElement1} rounded-full blur-xl opacity-20`}></div>
+          <div className={`absolute bottom-20 left-16 w-40 h-40 ${currentTheme.bgElement2} rounded-full blur-2xl opacity-15`}></div>
+          <div className={`absolute top-1/4 left-1/4 w-24 h-24 ${currentTheme.bgElement3} rounded-full blur-lg opacity-15`}></div>
+          <div className={`absolute top-1/2 right-1/3 w-28 h-28 ${currentTheme.bgElement4} rounded-full blur-2xl opacity-10`}></div>
         </div>
 
         {/* ------------ Mobile Layout ------------ */}
         <div className='md:hidden flex flex-col items-center relative z-10 max-w-4xl mx-auto w-full pb-6 pt-2'>
           {/* Image */}
           <div className="relative mb-4 -mt-12">
-            {/* Multiple Glow Layers */}
-            <div className={`absolute inset-0 ${currentTheme.imageGlow1} rounded-full blur-3xl scale-125 animate-pulse opacity-20`}></div>
-            <div className={`absolute inset-0 ${currentTheme.imageGlow2} rounded-full blur-2xl scale-110 animate-pulse opacity-30`} style={{animationDelay: '1s'}}></div>
+            {/* Static Glow Layers - No Animation */}
+            <div className={`absolute inset-0 ${currentTheme.imageGlow1} rounded-full blur-3xl scale-125 opacity-10`}></div>
+            <div className={`absolute inset-0 ${currentTheme.imageGlow2} rounded-full blur-2xl scale-110 opacity-15`}></div>
                          
-            <div className={`absolute inset-0 border-2 ${currentTheme.imageBorder1} rounded-full animate-spin opacity-40`} style={{animationDuration: '15s'}}></div>
-            <div className={`absolute inset-2 border ${currentTheme.imageBorder2} rounded-full animate-spin opacity-30`} style={{animationDuration: '20s', animationDirection: 'reverse'}}></div>
+            {/* Static Border Rings - No Animation */}
+            <div className={`absolute inset-0 border-2 ${currentTheme.imageBorder1} rounded-full opacity-30`}></div>
+            <div className={`absolute inset-2 border ${currentTheme.imageBorder2} rounded-full opacity-20`}></div>
                          
-            <div className={`absolute -top-6 -left-6 w-4 h-4 ${currentTheme.particle1} rounded-full animate-ping opacity-70`}></div>
-            <div className={`absolute -top-4 -right-4 w-3 h-3 ${currentTheme.particle2} rounded-full animate-ping opacity-60`} style={{animationDelay: '0.5s'}}></div>
-            <div className={`absolute -bottom-6 -right-6 w-5 h-5 ${currentTheme.particle3} rounded-full animate-ping opacity-50`} style={{animationDelay: '1s'}}></div>
-            <div className={`absolute -bottom-4 -left-4 w-2 h-2 ${currentTheme.particle4} rounded-full animate-ping opacity-80`} style={{animationDelay: '1.5s'}}></div>
+            {/* Static Particles - No Animation */}
+            <div className={`absolute -top-6 -left-6 w-4 h-4 ${currentTheme.particle1} rounded-full opacity-40`}></div>
+            <div className={`absolute -top-4 -right-4 w-3 h-3 ${currentTheme.particle2} rounded-full opacity-35`}></div>
+            <div className={`absolute -bottom-6 -right-6 w-5 h-5 ${currentTheme.particle3} rounded-full opacity-30`}></div>
+            <div className={`absolute -bottom-4 -left-4 w-2 h-2 ${currentTheme.particle4} rounded-full opacity-45`}></div>
                          
             <div className={`relative ${currentTheme.imageContainer} rounded-full p-4 shadow-2xl border overflow-hidden`}>
-              <div className={`absolute inset-0 ${currentTheme.imageInnerGlow1} rounded-full pointer-events-none opacity-40`}></div>
+              <div className={`absolute inset-0 ${currentTheme.imageInnerGlow1} rounded-full pointer-events-none opacity-20`}></div>
               <img 
                 src={Heroimg} 
                 alt='Godson Flinto J - Front End Developer' 
@@ -280,31 +282,31 @@ export default function Hero() {
           </div>
 
           {/* Image section */}
-          <div className="w-1/2 flex justify-center animate-float">
+          <div className="w-1/2 flex justify-center">
             <div className="relative">
-              {/* Multiple Layered Glow Effects */}
-              <div className={`absolute inset-0 ${currentTheme.imageGlow3} rounded-full blur-3xl scale-125 animate-pulse opacity-20`}></div>
-              <div className={`absolute inset-0 ${currentTheme.imageGlow4} rounded-full blur-2xl scale-115 animate-pulse opacity-30`} style={{animationDelay: '1s'}}></div>
-              <div className={`absolute inset-0 ${currentTheme.imageGlow5} rounded-full blur-xl scale-105 animate-pulse opacity-25`} style={{animationDelay: '2s'}}></div>
+              {/* Static Glow Effects - No Animation */}
+              <div className={`absolute inset-0 ${currentTheme.imageGlow3} rounded-full blur-3xl scale-125 opacity-10`}></div>
+              <div className={`absolute inset-0 ${currentTheme.imageGlow4} rounded-full blur-2xl scale-115 opacity-15`}></div>
+              <div className={`absolute inset-0 ${currentTheme.imageGlow5} rounded-full blur-xl scale-105 opacity-12`}></div>
               
-              {/* Animated Orbital Rings */}
-              <div className={`absolute inset-0 border-2 ${currentTheme.imageBorder3} rounded-full animate-spin opacity-40`} style={{animationDuration: '20s'}}></div>
-              <div className={`absolute inset-6 border ${currentTheme.imageBorder4} rounded-full animate-spin opacity-30`} style={{animationDuration: '15s', animationDirection: 'reverse'}}></div>
-              <div className={`absolute inset-12 border ${currentTheme.imageBorder5} rounded-full animate-spin opacity-20`} style={{animationDuration: '25s'}}></div>
+              {/* Static Border Rings - No Animation */}
+              <div className={`absolute inset-0 border-2 ${currentTheme.imageBorder3} rounded-full opacity-30`}></div>
+              <div className={`absolute inset-6 border ${currentTheme.imageBorder4} rounded-full opacity-20`}></div>
+              <div className={`absolute inset-12 border ${currentTheme.imageBorder5} rounded-full opacity-15`}></div>
               
-              {/* Floating Particles */}
-              <div className={`absolute -top-8 -left-8 w-6 h-6 ${currentTheme.particle1} rounded-full animate-ping opacity-70`}></div>
-              <div className={`absolute -top-4 -right-6 w-4 h-4 ${currentTheme.particle2} rounded-full animate-ping opacity-60`} style={{animationDelay: '0.5s'}}></div>
-              <div className={`absolute -bottom-8 -right-8 w-8 h-8 ${currentTheme.particle3} rounded-full animate-ping opacity-50`} style={{animationDelay: '1s'}}></div>
-              <div className={`absolute -bottom-6 -left-6 w-3 h-3 ${currentTheme.particle4} rounded-full animate-ping opacity-80`} style={{animationDelay: '1.5s'}}></div>
-              <div className={`absolute top-1/4 -right-4 w-2 h-2 ${currentTheme.particle5} rounded-full animate-ping opacity-90`} style={{animationDelay: '2s'}}></div>
-              <div className={`absolute bottom-1/4 -left-4 w-5 h-5 ${currentTheme.particle6} rounded-full animate-ping opacity-60`} style={{animationDelay: '2.5s'}}></div>
+              {/* Static Particles - No Animation */}
+              <div className={`absolute -top-8 -left-8 w-6 h-6 ${currentTheme.particle1} rounded-full opacity-40`}></div>
+              <div className={`absolute -top-4 -right-6 w-4 h-4 ${currentTheme.particle2} rounded-full opacity-35`}></div>
+              <div className={`absolute -bottom-8 -right-8 w-8 h-8 ${currentTheme.particle3} rounded-full opacity-30`}></div>
+              <div className={`absolute -bottom-6 -left-6 w-3 h-3 ${currentTheme.particle4} rounded-full opacity-45`}></div>
+              <div className={`absolute top-1/4 -right-4 w-2 h-2 ${currentTheme.particle5} rounded-full opacity-50`}></div>
+              <div className={`absolute bottom-1/4 -left-4 w-5 h-5 ${currentTheme.particle6} rounded-full opacity-35`}></div>
               
               <div className={`relative ${currentTheme.imageContainer} rounded-full p-10 shadow-2xl border overflow-hidden`}>
-                {/* Inner magical glow */}
-                <div className={`absolute inset-0 ${currentTheme.imageInnerGlow2} rounded-full pointer-events-none opacity-40`}></div>
-                <div className={`absolute top-4 left-4 w-16 h-16 ${currentTheme.imageInnerGlow3} rounded-full blur-xl pointer-events-none opacity-30`}></div>
-                <div className={`absolute bottom-4 right-4 w-20 h-20 ${currentTheme.imageInnerGlow4} rounded-full blur-2xl pointer-events-none opacity-20`}></div>
+                {/* Static inner glow - No Animation */}
+                <div className={`absolute inset-0 ${currentTheme.imageInnerGlow2} rounded-full pointer-events-none opacity-20`}></div>
+                <div className={`absolute top-4 left-4 w-16 h-16 ${currentTheme.imageInnerGlow3} rounded-full blur-xl pointer-events-none opacity-15`}></div>
+                <div className={`absolute bottom-4 right-4 w-20 h-20 ${currentTheme.imageInnerGlow4} rounded-full blur-2xl pointer-events-none opacity-10`}></div>
                 
                 <img 
                   src={Heroimg} 
@@ -422,12 +424,6 @@ export default function Hero() {
         )}
 
         <style>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-10px) rotate(0.5deg); }
-            66% { transform: translateY(-5px) rotate(-0.5deg); }
-          }
-          
           @keyframes modal-in {
             0% {
               opacity: 0;
@@ -437,11 +433,6 @@ export default function Hero() {
               opacity: 1;
               transform: scale(1) translateY(0);
             }
-          }
-          
-          .animate-float {
-            animation: float 6s ease-in-out infinite;
-            animation-delay: 1s;
           }
           
           .animate-modal-in {
@@ -502,8 +493,9 @@ export default function Hero() {
               opacity: 0.5;
             }
           }
-        `}</style>
-      </section>
+        `}
+        </style>
+        </section>
     </>
   );
 }

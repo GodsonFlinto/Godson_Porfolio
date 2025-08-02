@@ -11,7 +11,7 @@ const Header = () => {
  // Enhanced scroll detection
  useEffect(() => {
    const handleScroll = () => {
-     const sections = ['hero', 'about', 'education', 'projects', 'achievements', 'certificates', 'contact'];
+     const sections = ['hero', 'about', 'education', 'projects', 'achievement', 'certificates', 'contact'];
      const scrollPosition = window.scrollY + 100; // Offset for header height
 
      for (let i = sections.length - 1; i >= 0; i--) {
